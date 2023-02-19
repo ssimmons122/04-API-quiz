@@ -5,7 +5,7 @@ let question = {
     correctOption: 3,
 };
 
-//call funtion for question
+//call function for question
 function askQuestion () {
         let titleDiv = document.getElementById('inquiry');
         titleDiv.textContent = q.inquiry;
