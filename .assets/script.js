@@ -29,8 +29,8 @@ let option = document.querySelectorAll('.options');
     });
   }
   //call the function
-function askQuestion(question);
-    askQuestion(question);
+function askQuestion(question)
+    askQuestion(question)
 
 
   //add event listener to button
