@@ -10,11 +10,22 @@ h2 {
     align-items: center;
     text-align: center;
     font-weight: bold;
-}
-header {
     padding: 15px;
+}
+
+/* for high score upper left corner*/
+.score {
+   font-size: 20px;
+   font-weight: bold;
   }
-  
+ .score {
+    color: fuchsia;
+  }
+
+.hide {
+    display:none; 
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -83,8 +94,6 @@ button {
   font-size: 16px;
 }
 
-
-
 /* When button is checked, change to fuscia background */
 .container input:checked.click {
     background-color: fuchsia;
@@ -95,3 +104,5 @@ button:active {
 button:focus {
     background:fuchsia
   }
+
+ 
