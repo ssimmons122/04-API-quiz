@@ -1,3 +1,9 @@
+let btn = document.querySelector ("#btn");
+btn.addEventListener('click', function (askQuestion) {
+    console.log('Start');
+});
+// add timer here
+
 //define object
 let question = {
     inquiry: "Commonly used data types DO NOT include:",
@@ -5,35 +11,38 @@ let question = {
     correctOption: 3,
 };
 
+
 //call function for question
-function askQuestion () {
-        let titleDiv = document.getElementById('inquiry');
-        titleDiv.textContent = q.inquiry;
+function askQuestion (q) {
+        let inquiryDiv = document.getElementById('inquiry');
+        inquiryDiv.textContent = q.inquiry;
 
 
 let option = document.querySelectorAll('.options');
   console.log(option);
   option.forEach(function(element, index){
     element.textContent = q.options[index];
+    
     element.addEventListener('click', function(){
-        if (q.correctOption == index) {
-          console.log('Correct!');
-        } else {
-          console.log('Wrong!');
-        }
+        
       });
     });
   }
   //call the function
-  showQuestion(question);
-
+function askQuestion(question);
+    askQuestion(question);
 
 
   //add event listener to button
-  let btn = document.getElementById('btn');
-btn.addEventListener('click', function() {
-  console.log('Clicked!');
-});
+  let button = document.getElementById('button');
+button.addEventListener('click', function () {
+        console.log('Clicked!');
+     if (q.correctOption == index) {
+        console.log('Correct!');
+       } else {
+            console.log('Incorrect!');
+          }
+    });
  
 
   //let correctOption = document.getElementById('correctOption');
