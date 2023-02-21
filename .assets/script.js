@@ -1,6 +1,6 @@
 //timer variables 
 var timer = document.querySelector("#startBtn");
-var liveTimer = document.querySelector("#liveTime");
+var liveTime = document.querySelector("#liveTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var interval = 0;
 //start timer, 15 sec/question
@@ -11,48 +11,87 @@ var ulCreate = document.createElement("ul");
 
 
 // add timer here
-timer.addEventListener('click', function () {
-function startTimer() { 
+startBtn.addEventListener('click', function () {
+function liveTime () { 
     if (interval === 0) {
         interval = setInterval(function () {
             secondsLeft--;
-            currentTime.textContent = "Time: " + secondsLeft;
+            liveTime.textContent = "Time: " + secondsLeft;
     
             if (secondsLeft <= 0) {
                 clearInterval(interval);
                 allDone();
-                currentTime.textContent = "Time's up!";
+                liveTime.textContent = "Expired!";
             }
         }, 1000);
     }
     render(questionIndex);
     
-    let timer = document.querySelector("#startBtn");
-    let secondsLeft = 75;
+let timer = document.querySelector("#startBtn");
+let secondsLeft = 75;
+timer.textContent = secondsLeft;
+let interval = setInterval(function () {
+    secondsLeft--;
     timer.textContent = secondsLeft;
-    let interval = setInterval(function () {
-        secondsLeft--;
-        timer.textContent = secondsLeft;
-        if (secondsLeft === 0) {
-            clearInterval(interval);
+      if (secondsLeft === 0) {
+        clearInterval(interval);
         }
     }, 1000);
 }
 })
 
+function render(questionIndex) {
+    // Clears existing data 
+    questionsDiv.innerHTML = "";
+    ulCreate.innerHTML = "";
+    // For loops to loop through all info in array
+    for (var i = 0; i < questions.length; i++) {
+        // Appends question title only
+        var userQuestion = questions[questionIndex].title;
+        var userChoices = questions[questionIndex].choices;
+        questionsDiv.textContent = userQuestion;
+    }
+    // New for each for question choices
+    userChoices.forEach(function (newItem) {
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        questionsDiv.appendChild(ulCreate);
+        ulCreate.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
+}
+// Event to compare choices with answer
+function compare(event) {
+    var element = event.target;
 
+    if (element.matches("li")) {
 
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        // correct answer 
+        if (element.textContent == questions[questionIndex].answer) {
+            score++;
+            createDiv.textContent = "Correct!";
+            // incorrect answer 
+        } else {
+            // take 10 seconds off time 
+            secondsLeft = secondsLeft - penalty;
+            createDiv.textContent = "Incorrect!";
+        }
+
+    }
+}          
 
 function allDone() {
     clearInterval(interval);
-    currentTime.textContent = "Time's up!";
+    liveTime.textContent = "Time's up!";
 }
 
 var score = 0;
 var questionIndex = 0;
 
 
-   
+  
 //question variables 
 var questions = [
     {
@@ -84,12 +123,3 @@ var questions = [
 ];
 
 
-//call function for question
-let option = document.querySelectorAll('.options');
-  console.log(option);
-  option.forEach(function(options, index){
-    element.textContent = q.options[index];
-    
-    });
-   
-;
