@@ -4,7 +4,7 @@ btn.addEventListener('click', function (askQuestion) {
 });
 // add timer here
 function startTimer() { 
-    let timer = document.querySelector("#startTime");
+    let timer = document.querySelector("#startBtn");
     let secondsLeft = 75;
     timer.textContent = secondsLeft;
     let interval = setInterval(function () {
@@ -20,7 +20,7 @@ var score = 0;
 var questionIndex = 0;
 
 //timer variables 
-    var timer = document.querySelector("#startTime");
+    var timer = document.querySelector("#startBtn");
     var liveTimer = document.querySelector("#liveTime");
     var questionsDiv = document.querySelector("#questionsDiv");
     //start timer, 15 sec/question

@@ -10,17 +10,25 @@
   <title>It's Quiz Time!</title>
 </head>
 
+<header class="site-header">
+  <div class="wrapper site-header__wrapper">
+          <!--link tohigh score-->
+ <a href = "HighScore.html">View High Scores</a>
+
+<!--timer-->
+  <div id = "timer">Time:0</div>
+  </div>
+</header>
+
 <body>
-  <div class = "header">
+  <section class = "hero">
     <h1>Coding Quiz Challenge</h1>
       <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by ten seconds!</p>
   </div>
   
- <!--link tohigh score-->
- <a href = "HighScore.html"> View High Scores</a>
+
  
- <!--timer-->
- <div id = "timer"></div>
+ 
 
  <!--quiz questions/ending-->
  <div class = "content" id = "question-area">
@@ -28,6 +36,8 @@
       </div>
     <ul id = "optionsUl">
       </ul>
+
+    <button id = "startbtn">Start Quiz</button>
   </div>
 
 <script src=".assets/script.js"></script>
