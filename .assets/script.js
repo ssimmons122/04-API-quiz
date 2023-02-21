@@ -1,3 +1,10 @@
+function rage () {
+    var startBtn = document.createElement("button");
+    button.textContent = "rage!";
+    button.addEventListener("click", rage);
+    startBtn.appendChild(button);
+}
+
 //timer variables 
 var timer = document.querySelector("#startBtn");
 var liveTime = document.querySelector("#liveTime");
@@ -11,8 +18,7 @@ var ulCreate = document.createElement("ul");
 
 
 // add timer here
-startBtn.addEventListener('click', function () {
-function liveTime () { 
+timer.addEventListener('click', function () {
     if (interval === 0) {
         interval = setInterval(function () {
             secondsLeft--;
@@ -37,21 +43,19 @@ let interval = setInterval(function () {
         clearInterval(interval);
         }
     }, 1000);
-}
 })
 
 function render(questionIndex) {
     // Clears existing data 
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
-    // For loops to loop through all info in array
+    
     for (var i = 0; i < questions.length; i++) {
-        // Appends question title only
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
-    // New for each for question choices
+    //new questions
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;

@@ -1,28 +1,23 @@
-.startBtn {
-    margin-left: 33%;
-    padding: 15px 32px;
-    background-color: #5f005f; /* Dark Magenta */
-    border: none;
-    border-radius: 8px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+ #startBtn {
+      background-color: #540154; /* Dark Magenta  */
+      border: none;
+      border-radius: 8px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+ }
+ .container input:checked.click {
+    background-color: fuchsia;
   }
-  
-  /* When button is clicked, change to fuscia background */
-  .container input:checked.click {
-      background-color: fuchsia;
-    }
-  button:active {
-      background:fuchsia 
-  };
-  button:focus {
-      background:fuchsia
-    }
-
+button:active {
+    background:fuchsia 
+};
+button:focus {
+    background:fuchsia
+  }
 
 .site-header__wrapper {
     display: contents;
@@ -64,7 +59,16 @@
     
   }
 
-
+/* When button is clicked, change to fuscia background */
+.container input:checked.click {
+    background-color: fuchsia;
+  }
+button:active {
+    background:fuchsia 
+};
+button:focus {
+    background:fuchsia
+  }
 
 .hide {
     display:none; 
