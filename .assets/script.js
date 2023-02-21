@@ -1,9 +1,32 @@
-let btn = document.querySelector ("#btn");
-btn.addEventListener('click', function (askQuestion) {
-    console.log('Start');
-});
+//timer variables 
+var timer = document.querySelector("#startBtn");
+var liveTimer = document.querySelector("#liveTime");
+var questionsDiv = document.querySelector("#questionsDiv");
+var interval = 0;
+//start timer, 15 sec/question
+var secondsLeft = 75; 
+//when wrong answer
+var handicap = 10;
+var ulCreate = document.createElement("ul");
+
+
 // add timer here
+timer.addEventListener('click', function () {
 function startTimer() { 
+    if (interval === 0) {
+        interval = setInterval(function () {
+            secondsLeft--;
+            currentTime.textContent = "Time: " + secondsLeft;
+    
+            if (secondsLeft <= 0) {
+                clearInterval(interval);
+                allDone();
+                currentTime.textContent = "Time's up!";
+            }
+        }, 1000);
+    }
+    render(questionIndex);
+    
     let timer = document.querySelector("#startBtn");
     let secondsLeft = 75;
     timer.textContent = secondsLeft;
@@ -15,19 +38,20 @@ function startTimer() {
         }
     }, 1000);
 }
+})
+
+
+
+
+function allDone() {
+    clearInterval(interval);
+    currentTime.textContent = "Time's up!";
+}
 
 var score = 0;
 var questionIndex = 0;
 
-//timer variables 
-    var timer = document.querySelector("#startBtn");
-    var liveTimer = document.querySelector("#liveTime");
-    var questionsDiv = document.querySelector("#questionsDiv");
-    //start timer, 15 sec/question
-    var secondsLeft = 75; 
-    //when wrong answer
-    var handicap = 10;
-    var ulCreate = document.createElement("ul");
+
    
 //question variables 
 var questions = [
@@ -68,25 +92,4 @@ let option = document.querySelectorAll('.options');
     
     });
    
-  
- //add event listener to button
- timer.addEventListener("click", function () {
-    if (holdInterval === 0) {
-        holdInterval = setInterval(function () {
-            secondsLeft--;
-            currentTime.textContent = "Time: " + secondsLeft;
-
-            if (secondsLeft <= 0) {
-                clearInterval(holdInterval);
-                allDone();
-                currentTime.textContent = "Time's up!";
-            }
-        }, 1000);
-    }
-    render(questionIndex);
-});
- 
-
-
-
-
+;
