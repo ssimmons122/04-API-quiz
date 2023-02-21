@@ -1,9 +1,6 @@
-function rage () {
-    var startBtn = document.createElement("button");
-    button.textContent = "rage!";
-    button.addEventListener("click", rage);
-    startBtn.appendChild(button);
-}
+startBtn.addEventListener('click', startQuiz);
+
+
 
 //timer variables 
 var timer = document.querySelector("#startBtn");
