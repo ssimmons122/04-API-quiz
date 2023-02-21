@@ -5,22 +5,32 @@
 }
 
 
-h2 {
+h1 {
     font-size: 2.5rem;   
     align-items: center;
     text-align: center;
     font-weight: bold;
     padding: 15px;
-}
+};
+
+p {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center
+};
 
 /* for high score upper left corner*/
 .score {
    font-size: 20px;
    font-weight: bold;
+   color: fuchsia;
+   float: left;
   }
- .score {
-    color: fuchsia;
-  }
+/* for timer upper right corner*/
+.timer {   
+    float: right
+}
+
 
 .hide {
     display:none; 

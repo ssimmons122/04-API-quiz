@@ -3,6 +3,31 @@ btn.addEventListener('click', function (askQuestion) {
     console.log('Start');
 });
 // add timer here
+function startTimer() { 
+    let timer = document.querySelector("#startTime");
+    let secondsLeft = 75;
+    timer.textContent = secondsLeft;
+    let interval = setInterval(function () {
+        secondsLeft--;
+        timer.textContent = secondsLeft;
+        if (secondsLeft === 0) {
+            clearInterval(interval);
+        }
+    }, 1000);
+}
+    
+
+//timer variables 
+    var currentTime = document.querySelector("#currentTime");
+    var timer = document.querySelector("#startTime");
+    var questionsDiv = document.querySelector("#questionsDiv");
+   
+//question variables 
+    let q = {
+        inquiry: "Commonly used data types DO NOT include:",
+        options: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
+        correctOption: 3,
+    };
 
 //define object
 let question = {
@@ -20,17 +45,17 @@ function askQuestion (q) {
 
 let option = document.querySelectorAll('.options');
   console.log(option);
-  option.forEach(function(element, index){
+  option.forEach(function(options, index){
     element.textContent = q.options[index];
     
-    element.addEventListener('click', function(){
+    //element.addEventListener('click', function(){
         
       });
-    });
-  }
+    };
+  
   //call the function
 function askQuestion(question)
-    askQuestion(question)
+    askQuestion(question);
 
 
   //add event listener to button
@@ -45,11 +70,6 @@ button.addEventListener('click', function () {
     });
  
 
-  //let correctOption = document.getElementById('correctOption');
-  //correctOption.textContent = q.options[q.correctOption];
-  //console.log(correctOption);
-  //console.log(q.correctOption);
-  //console.log(q.options);
-  //console.log(q.options[q.correctOption]);
+
 
 
