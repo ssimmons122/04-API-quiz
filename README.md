@@ -14,5 +14,5 @@ Screenshot of work in progress
 ## Acknowledgements
 Study groups and tutor, Wes. 
 
-##Project Status
+## Project Status
 Will be resubmitting with updates as confidience and knowledge of languages builds
