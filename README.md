@@ -7,8 +7,12 @@ This project contains a combination of JavaScript, CSS, and HTML application to 
 Test your knowledge of JavaScript (and my ability to use APIs appropriately).
 
 ## Visual
-![04-web-apis-homework-demo-2](https://user-images.githubusercontent.com/121777930/220512644-f32652d0-c036-4fee-a1a6-766f8f3b51ad.gif)
+Screenshot of work in progress
+![Screenshot 2023-02-21 at 10 20 58 PM](https://user-images.githubusercontent.com/121777930/220513046-4278ef22-01f3-46e8-bf3f-a57a163d01ba.png)
 
 
 ## Acknowledgements
 Study groups and tutor, Wes. 
+
+##Project Status
+Will be resubmitting with updates as confidience and knowledge of languages builds
