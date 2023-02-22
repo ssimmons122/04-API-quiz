@@ -1,4 +1,13 @@
-startBtn.addEventListener('click', startQuiz);
+var ul = document.createElement("ul");
+button.innerHTML = "Do Something";
+
+// 2. Append somewhere
+var body = document.getElementByID("startBtn")[0];
+body.appendChild(button);
+
+// 3. Add event handler
+startBtn.addEventListener('click', startBtn);
+  alert("Start Quiz");
 
 
 
