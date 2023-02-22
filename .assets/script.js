@@ -1,15 +1,3 @@
-var ul = document.createElement("ul");
-button.innerHTML = "Do Something";
-
-// 2. Append somewhere
-var body = document.getElementByID("startBtn")[0];
-body.appendChild(button);
-
-// 3. Add event handler
-startBtn.addEventListener('click', startBtn);
-  alert("Start Quiz");
-
-
 
 //timer variables 
 var timer = document.querySelector("#startBtn");
@@ -52,7 +40,6 @@ let interval = setInterval(function () {
 })
 
 function render(questionIndex) {
-    // Clears existing data 
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
     
@@ -70,7 +57,7 @@ function render(questionIndex) {
         listItem.addEventListener("click", (compare));
     })
 }
-// Event to compare choices with answer
+//check answer
 function compare(event) {
     var element = event.target;
 

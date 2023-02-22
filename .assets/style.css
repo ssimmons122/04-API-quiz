@@ -1,27 +1,3 @@
- #startBtn {
-      background-color: #540154; /* Dark Magenta  */
-      border: none;
-      border-radius: 8px;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
- }
- .container input:checked.click {
-    background-color: fuchsia;
-  }
-button:active {
-    background:fuchsia 
-};
-button:focus {
-    background:fuchsia
-  }
-
-  .hide {
-    display:none; 
-}
 
 main {
     display: flex;
@@ -38,7 +14,7 @@ main {
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: -1;
+    z-index: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -75,6 +51,18 @@ main {
   }
 
 /* When button is clicked, change to fuscia background */
+#startBtn {
+  background-color: #540154; /* Dark Magenta  */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 .container input:checked.click {
     background-color: fuchsia;
   }
